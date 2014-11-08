@@ -3,3 +3,4 @@ settings.js
 .DS_Store
 .idea
 Finance.iml
+db.db

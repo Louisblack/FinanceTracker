@@ -1,6 +1,10 @@
 
-var fileReader = require('./fileReader');
+var fileReader = require('./fileReader'),
+    dbWriter = require('./dbWriter');
+
 
 fileReader.findTransactions(function(transactions) {
-    console.log(transactions);
+    //TODO Dedupe and categorise.
+    dbWriter.writeTransactions(transactions);
 });
+

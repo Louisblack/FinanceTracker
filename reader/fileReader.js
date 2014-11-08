@@ -25,10 +25,15 @@ exports.findTransactions = function(callback) {
     }); 
 };
 
+/*
+    Currently very coupled to Nationwide's csv format. 
+    Might be worth pulling this stuff out into modules
+    so other bank's formats can be plugged in.
+*/
 var loadTransactionsFromFile = function(fileName, callback) {
     fs.readFile(settings.filePath + '/' + fileName, {encoding: 'utf-8'}, function(err, data) {
-        if (!err) {
-            
+        if (!err) {          
+            //Get rid of the guff before the actual transactions.
             var withoutHeader = data.substr(data.indexOf('"Date"'));
             parse(withoutHeader, {columns: true}, function(err, data) {
                 callback(data);
