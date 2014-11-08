@@ -1,5 +1,3 @@
-
-debugger;
 var orm      = require('orm');
 var settings = require('../settings');
 
