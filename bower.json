@@ -1,0 +1,7 @@
+{
+  "name": "FinanceTracker",
+  "version": "v0.0.1",
+  "dependencies": {
+      "highcharts": "latest"  
+  }
+}

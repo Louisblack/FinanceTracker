@@ -4,3 +4,4 @@ settings.js
 .idea
 Finance.iml
 db.db
+webapp/public/lib
